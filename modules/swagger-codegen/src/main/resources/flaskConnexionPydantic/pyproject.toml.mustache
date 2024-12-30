@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{projectName}}"
+version = "{{projectVersion}}"
+description = "{{projectDescription}}"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "{{authorName}}", email = "{{authorEmail}}" }]
+requires-python = ">=3.8"
+
+[project.dependencies]
+flask = ">=2.0"
+connexion = ">=2.7.0"
+{{#additionalDependencies}}
+{{dependency}} = "{{version}}"
+{{/additionalDependencies}}
